@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder</title>
+    <link rel="icon" href="./assets/images/favicon.svg">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+</head>
+<body>
+    
+    <main>
+        <div id="banner">
+            <h1>Encoder</h1>
+            <!-- START BUTTON -->
+            <button id="start-button" onclick="getStarted()">START</button>
+            <!-- GET DATA GROUP -->
+            <div id="get-data-group">
+                <button id="btn-fileUploadButton">
+                    <label for="fileUploadButton">
+                        <span>UPLOAD A TEXT FILE</span>
+                        <input style="display:none" id="fileUploadButton" onchange="fileUpload(this.files[0])" type="file"
+                            value="source file upload">
+                    </label>
+                </button>
+                <button id="btn-fontUploadButton">
+                    <label for="fontUploadButton">
+                        <span>UPLOAD AN IMAGE/FONT FILE</span>
+                        <input style="display:none" id="fontUploadButton" onchange="fontUpload(this.files[0])" type="file"
+                            value="source file upload">
+                    </label>
+                </button>
+                <button id="pasteFromClipboard" onclick="pasteText()">PASTE FROM CLIPBOARD</button>
+            </div>
+            <!-- START MINIFY GROUP -->
+            <div id="start-minify-group">
+                <button id="startMinifyButtonHTML" class="btn" onclick="minifyHTML()">minify HTML</button>
+                <button id="startMinifyButtonCSS" class="btn" onclick="minifyCSS()">minify CSS</button>
+                <button id="startMinifyButtonJS" class="btn" onclick="minifyJS()">minify JS</button>
+                <button id="startEncodeSVG" class="btn" onclick="encodeSVG()">encode SVG</button>
+            </div>
+            <!-- DOWNLOAD / COPY -->
+            <div id="download-group">
+                <!-- INPUTS -->
+                <div id="download-group-input">
+                    <input id="fileName" type="text" size="35" placeholder="filename" autofocus>
+                    &nbsp;&nbsp;&nbsp;
+                    <select id="downloadType">
+                        <option value="min.html">.min.html</option>
+                        <option value="min.css">.min.css</option>
+                        <option value="min.js">.min.js</option>
+                        <option value="min.txt" selected>.txt</option>
+                        <option value="b64.txt">.b64.txt</option>
+                    </select>
+                </div>
+                <!-- STATISTICS -->
+                <div id="statistics-group">
+                    <div>source:<span id="sourceb"></div>
+                    <div>target:<span id="targetb"></div>
+                    <div>percent change:<span id="changep"></div>
+                </div>
+                <!-- RELOAD -->
+                <div id="reload-group">
+                    <div><button id="reload-button" onclick="location.reload()">reload</button></div>
+                    <div><button id="downloadButton" onclick="fileDownload()" >download</button></div>
+                    <div><button id="copyToClipboard" onclick="copyText()">copy</button></div>
+                    
+                    <div id="copy-confirm"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- COPY/PASTE AREAS -->
+    <div id="source" class="text-area"></div>
+    <div id="target" class="text-area"></div>
+    <textarea id="copy-area"></textarea>
+
+</body>
+<script src="./assets/js/script.js">
+
+</script>
+</html>
