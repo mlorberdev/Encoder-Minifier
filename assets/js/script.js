@@ -44,7 +44,6 @@ function quickCheckDataType(substring) {
 function minifyHTML(){
     let source = document.getElementById("source").innerText;
     let target = source
-    // the regExes I've seen questions on in the forums were condensed, difficult to suss out. this approach is much my style.
         .replace(/(?=(\<\!\-\-))(.*)(\-\-\>)/g,"") // comments in html are surrounded by <!-- ... -->, so this regex is for comments.
         // it parses to this:  (?=(\<\!\-\-)) '(look ahead ?= from this group () <!-- all 4 chars escaped with '\', for everything (.*) until
         // you get to this group (\<\!\-\-) or '-->'. 

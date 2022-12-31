@@ -141,11 +141,13 @@ button img {
 
 #download-group-input {
     border: 1px solid white;
+    background-color: #777;
 }
 
 #statistics-group {
     font-size: 0.9rem;
-    color: #ffffff66;
+    background-color: #444;
+    color: #fff;
     transition: visibility 0.3s var(--bez);
     padding-top: 1rem;
 }
