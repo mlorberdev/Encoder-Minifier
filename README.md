@@ -28,7 +28,7 @@ let target = source
 
 ## Screenshot
 JavaScript, ~ 40% reduction (mostly from comments)
-![](./images/ss1.png)
+![screenshot](./assets/images/ss1.png)
 
 ## License
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
