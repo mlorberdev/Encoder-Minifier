@@ -1,5 +1,7 @@
 # Encoder-Minifier
 
+Deployed [here](https://encoder-minifier.netlify.app/)
+
 ## Purpose
 Minify and encode production scripts / fonts / icons / images.
 * Source code minification (HTML / CSS / JS)
